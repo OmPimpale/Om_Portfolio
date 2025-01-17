@@ -1,11 +1,11 @@
-// let giveIcon1 = () => {
-//     let pad = document.getElementById("abouticon1");
-//     pad.style.marginBottom = "-10px";
-//     pad.style.marginTop = "10px";
+// let cardGive1 = () => {
+//     let div = document.getElementById("project1");
+//     div.style.border = "4px solid #007f73";
+//     div.style.transition = "all .5s";
 // }
 
-// let giveIcon2 = () => {
-//     let pad = document.getElementById("abouticon1");
-//     pad.style.marginBottom = "-10px";
-//     pad.style.marginTop = "10px";
+// let cardRemove1 = () => {
+//     let div = document.getElementById("project1");
+//     div.style.border = "none";
+//     div.style.transition = "all .5s";
 // }

@@ -7,7 +7,7 @@
     --blackcolor: black;
 }
 
-.main {
+main {
     overflow: hidden;
     /* For animations */
 }
@@ -37,24 +37,27 @@
 }
 
 #heroimg {
-    filter: drop-shadow(0px 0px 20px var(--themecolor));
-    animation: mymove 5s infinite;
-    transition: all .4s ease-in-out;
+    filter: drop-shadow(0 0 25px var(--themecolor));
+    animation: mymove 5s ease-in-out infinite;
+    transition: all .4s ease;
 }
 
 #heroimg:hover {
-    filter: drop-shadow(0px 0px 40px var(--themecolor));
+    filter: drop-shadow(0 0 40px var(--themecolor));
 }
 
 @keyframes mymove {
 
-    0%,
-    100% {
-        transform: scale(.95);
+    0% {
+        transform: translateY(0);
     }
 
     50% {
-        transform: scale(1);
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -86,7 +89,7 @@
 }
 
 .herobtn:hover {
-    box-shadow: 1px 1px 15px var(--themecolor);
+    box-shadow: 0px 0px 25px var(--themecolor);
 }
 
 /* ==== about ==== */
@@ -121,7 +124,7 @@
     font-size: 22px;
     border: 2px solid var(--themecolor);
     border-radius: 50%;
-    transition: all .6s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 #abouticon1 {
@@ -135,15 +138,181 @@
 .abouticon:hover {
     color: var(--whitecolor);
     background-color: var(--themecolor);
-    transform: rotateY(360deg);
+    transform: scale(1.15) translateY(-10px);
+    box-shadow: 0 0 25px var(--themecolor);
 }
+
+/* ==== education ==== */
+#education {
+    margin: 120px 0px;
+}
+
+#eduhead {
+    font: 700 48px var(--headfont);
+    color: var(--blackcolor);
+}
+
+#eduhead span {
+    color: var(--themecolor);
+}
+
+/* timeline */
+.timeline {
+    /* width: 800px; */
+    /* background-color: #072736; */
+    color: #fff;
+    padding: 30px 20px;
+    /* width: 80%; */
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, .5); */
+}
+
+.timeline ul {
+    list-style-type: none;
+    border-left: 2px solid #094a68;
+    padding: 10px 5px;
+}
+
+.timeline ul li {
+    padding: 20px 20px;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.timeline ul li span {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    padding: 3px 6px;
+    /* font-size: 15px; */
+    font: 500 15px var(--headfont);
+    text-align: center;
+}
+
+.timeline ul li .content h3 {
+    color: var(--themecolor);
+    font: 600 20px var(--headfont);
+    padding-top: 5px;
+}
+
+.timeline ul li .content p {
+    padding: 5px 0px 15px 0px;
+    font: 400 15px var(--textfont);
+    color: var(--blackcolor);
+}
+
+.timeline ul li:before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--themecolor);
+    border-radius: 50%;
+    left: -11px;
+    top: 28px;
+    transition: .5s;
+}
+
+.timeline ul li:hover {
+    background-color: var(--lightcolor);
+}
+
+/* ==== skills ==== */
+#skills {
+    /* margin: 120px 0px; */
+    background-color: var(--lightcolor);
+}
+
+#skillhead {
+    font: 700 48px var(--headfont);
+    color: var(--blackcolor);
+}
+
+#skillhead span {
+    color: var(--themecolor);
+}
+
+/* ==== project ==== */
+#project {
+    margin: 120px 0px;
+    /* background-color: var(--lightcolor); */
+}
+
+#projecthead {
+    font: 700 48px var(--headfont);
+    color: var(--blackcolor);
+}
+
+#projecthead span {
+    color: var(--themecolor);
+}
+
+.projectcard {
+    background-color: var(--lightcolor);
+    transition: all .3s ease;
+    border: 3.5px solid var(--lightcolor);
+}
+
+.projectcard:hover {
+    border-color: var(--themecolor);
+    transform: scale(1.02);
+}
+
+#project1 {
+    background-image: url('../images/illustrative/bg1.jpg');
+    /* padding: 30px 20px !important; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project2 {
+    background-image: url('../images/illustrative/bg2.jpg');
+    padding: 30px 20px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.projectname {
+    font: 700 21px var(--headfont);
+    color: var(--blackcolor);
+}
+
+.projectname span {
+    color: var(--themecolor);
+}
+
+.gitlogo {
+    font-size: 21px;
+    color: var(--blackcolor);
+}
+
+.projectdiscribtion {
+    font: 400 14px var(--textfont);
+    color: var(--blackcolor);
+}
+
+.learn {
+    border: 1px solid;
+    padding: 2px 7px;
+    border-radius: 30px;
+    font: 500 13px var(--textfont);
+    /* background-color:var(--themecolor); */
+}
+
+
+
 
 
 
 @media only screen and (min-width:768px) {
 
     #herosection,
-    #about {
+    #about,
+    #eduhead,
+    #skills,
+    #project {
         padding: 0px 24px !important;
     }
 
@@ -156,7 +325,10 @@
 @media only screen and (min-width:1024px) {
 
     #herosection,
-    #about {
+    #about,
+    #eduhead,
+    #skills,
+    #project {
         padding: 0px 93px !important;
     }
 
@@ -190,12 +362,30 @@
     #abouttext {
         font-size: 14px;
     }
+
+    /* ==== education ==== */
+    #eduhead {
+        font-size: 53px;
+    }
+
+    /* ==== skills ==== */
+    #skillhead {
+        font-size: 53px;
+    }
+
+    /* ==== project ==== */
+    #projecthead {
+        font-size: 53px;
+    }
 }
 
 @media only screen and (min-width:1440px) {
 
     #herosection,
-    #about {
+    #about,
+    #eduhead,
+    #skills,
+    #project {
         padding: 0px 130px !important;
     }
 
@@ -211,12 +401,28 @@
     .nav-link {
         font-size: 19px;
     }
+
+    /* ==== projects ==== */
+    .projectname {
+        font-size: 26px;
+    }
+
+    .projectdiscribtion {
+        font-size: 16px;
+    }
+
+    .gitlogo {
+        font-size: 26px;
+    }
 }
 
 @media only screen and (min-width:2560px) {
 
     #herosection,
-    #about {
+    #about,
+    #eduhead,
+    #skills,
+    #project {
         padding: 0px 230px !important;
     }
 
