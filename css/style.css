@@ -1,0 +1,225 @@
+:root {
+    --headfont: "Lexend Deca", serif;
+    --textfont: "Lato", serif;
+    --themecolor: #007f73;
+    --lightcolor: #d5fdf9;
+    --whitecolor: white;
+    --blackcolor: black;
+}
+
+.main {
+    overflow: hidden;
+    /* For animations */
+}
+
+/* ==== navbar ==== */
+.navbar {
+    background-color: var(--themecolor) !important;
+}
+
+#navlogo {
+    color: var(--whitecolor);
+    font: 700 24px var(--headfont);
+}
+
+#navbtn {
+    color: var(--whitecolor);
+}
+
+.nav-link {
+    font: 700 17px var(--headfont) !important;
+    color: var(--whitecolor) !important;
+}
+
+/* ==== herosection ==== */
+#herosection {
+    margin: 120px 0px;
+}
+
+#heroimg {
+    filter: drop-shadow(0px 0px 20px var(--themecolor));
+    animation: mymove 5s infinite;
+    transition: all .4s ease-in-out;
+}
+
+#heroimg:hover {
+    filter: drop-shadow(0px 0px 40px var(--themecolor));
+}
+
+@keyframes mymove {
+
+    0%,
+    100% {
+        transform: scale(.95);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.herohead1 {
+    font: 700 21px var(--headfont);
+    color: var(--blackcolor);
+}
+
+.herohead2 {
+    font: 700 40px var(--headfont);
+    color: var(--blackcolor);
+}
+
+.herohead1 span {
+    color: var(--themecolor);
+}
+
+#herotext {
+    font: 400 13px var(--textfont);
+}
+
+.herobtn {
+    background-color: var(--themecolor);
+    font: 600 14px var(--headfont);
+    color: white;
+    padding: 8px 30px !important;
+    border-radius: 100px !important;
+    transition: all .4s ease-in-out;
+}
+
+.herobtn:hover {
+    box-shadow: 1px 1px 15px var(--themecolor);
+}
+
+/* ==== about ==== */
+#about {
+    background-color: var(--lightcolor);
+}
+
+#abouthead1 {
+    font: 700 48px var(--headfont);
+    color: var(--blackcolor);
+}
+
+#abouthead1 span {
+    color: var(--themecolor);
+}
+
+#abouthead2 {
+    font: 700 24px var(--headfont);
+    color: var(--blackcolor);
+}
+
+#abouthead2 span {
+    color: var(--themecolor);
+}
+
+#abouttext {
+    font: 400 13px var(--textfont);
+}
+
+.abouticon {
+    color: var(--themecolor);
+    font-size: 22px;
+    border: 2px solid var(--themecolor);
+    border-radius: 50%;
+    transition: all .6s ease-in-out;
+}
+
+#abouticon1 {
+    padding: 8.4px 8.75px;
+}
+
+#abouticon2 {
+    padding: 8.4px 9.78px;
+}
+
+.abouticon:hover {
+    color: var(--whitecolor);
+    background-color: var(--themecolor);
+    transform: rotateY(360deg);
+}
+
+
+
+@media only screen and (min-width:768px) {
+
+    #herosection,
+    #about {
+        padding: 0px 24px !important;
+    }
+
+    /* ==== navbar ==== */
+    .navbar {
+        padding: 12.5px;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+
+    #herosection,
+    #about {
+        padding: 0px 93px !important;
+    }
+
+    /* ==== navbar ==== */
+    .navbar {
+        padding: 12.5px 30px;
+    }
+
+    /* ==== herosection ==== */
+    .herohead1 {
+        font-size: 33px;
+    }
+
+    .herohead2 {
+        font-size: 53px;
+    }
+
+    #herotext {
+        font-size: 14px;
+    }
+
+    /* ==== about ==== */
+    #abouthead1 {
+        font-size: 53px;
+    }
+
+    #abouthead2 {
+        font-size: 27px;
+    }
+
+    #abouttext {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+
+    #herosection,
+    #about {
+        padding: 0px 130px !important;
+    }
+
+    /* ==== navbar ==== */
+    #navlogo {
+        font-size: 30px;
+    }
+
+    .navbar {
+        padding: 12.5px 50px;
+    }
+
+    .nav-link {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width:2560px) {
+
+    #herosection,
+    #about {
+        padding: 0px 230px !important;
+    }
+
+    /* ==== navbar ==== */
+
+}

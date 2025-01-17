@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OmPimpale - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="">
+
+    <header>
+        <!-- ==== navbar ==== -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" id="">
+                <a class="navbar-brand" href="#" id="navlogo">OmPimpale.</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" id="navbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-2" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+
+        <!-- ==== herosection ==== -->
+        <section class="row" id="herosection">
+            <div class="col">
+                <section class="row justify-content-center justify-content-lg-evenly">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <img src="./images/background/avtar.png" alt="avtar" class="img-fluid" id="heroimg">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-5 mt-4 my-lg-auto">
+                        <h3 class="herohead1">Hello, Myself</h3>
+                        <h1 class="herohead2">Om Pimpale</h1>
+                        <h3 class="herohead1">And I'm a <span>Full Stack Java Developer</span></h3>
+                        <p class="my-3 pb-3" id="herotext">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe corrupti dolorem molestiae
+                            cupiditate non natus adipisci nesciunt ipsa magni eos?
+                        </p>
+                        <a href="#" class="text-decoration-none herobtn me-2">Hire me</a>
+                        <a href="#" class="text-decoration-none herobtn mx-2">Projects</a>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- ==== about ==== -->
+        <section class="row py-5" id="about">
+            <div class="col">
+                <section class="row justify-content-center">
+                    <div class="col-12 col-md-8 mb-4 d-lg-none">
+                        <img src="./images/background/avtar3.png" alt="avtra" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-11 col-lg-6 my-auto">
+                        <h2 id="abouthead1">About <span>Me</span></h2>
+                        <h3 id="abouthead2">I'm a <span>Full Stack Java Developer</span></h3>
+                        <p id="abouttext" class="my-3 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Dolor, ea quae itaque suscipit ex
+                            labore inventore, atque sunt veniam, debitis aut voluptate perspiciatis! Eos natus pariatur
+                            sapiente, nulla unde ex tempore voluptatibus quibusdam esse harum ipsum temporibus
+                            molestiae. Repellat, soluta.
+                        </p>
+                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-github abouticon me-2"
+                                id="abouticon1" onmouseover="giveIcon1()" onmouseleave="takeIcon1()"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-linkedin-in abouticon mx-2"
+                                id="abouticon2" onmouseover="giveIcon2()" onmouseleave="takeIcon2()"></i></a>
+                    </div>
+                    <div class="col d-none d-lg-inline">
+                        <img src="./images/background/avtar3.png" alt="avtra" class="img-fluid">
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="row" id="education">
+            <div class="col">
+                <section class="row">
+                    <h2 id="eduhead">Education</h2>
+                    <div class="col">
+                        
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
