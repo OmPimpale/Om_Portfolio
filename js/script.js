@@ -1,11 +1,12 @@
-// let cardGive1 = () => {
-//     let div = document.getElementById("project1");
-//     div.style.border = "4px solid #007f73";
-//     div.style.transition = "all .5s";
-// }
+let sendMail = () => {
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        num: document.getElementById("mobno").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("msg").value
+    }
 
-// let cardRemove1 = () => {
-//     let div = document.getElementById("project1");
-//     div.style.border = "none";
-//     div.style.transition = "all .5s";
-// }
+    emailjs.send("service_6sojt7z","template_pjfu4xf",parms).then(alert("Email Sent!!"));
+
+}

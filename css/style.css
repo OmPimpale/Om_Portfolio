@@ -39,7 +39,7 @@ main {
 #heroimg {
     filter: drop-shadow(0 0 25px var(--themecolor));
     animation: mymove 5s ease-in-out infinite;
-    transition: all .4s ease;
+    transition: all .3s ease;
 }
 
 #heroimg:hover {
@@ -85,7 +85,7 @@ main {
     color: white;
     padding: 8px 30px !important;
     border-radius: 100px !important;
-    transition: all .4s ease-in-out;
+    transition: all .3s ease;
 }
 
 .herobtn:hover {
@@ -124,7 +124,7 @@ main {
     font-size: 22px;
     border: 2px solid var(--themecolor);
     border-radius: 50%;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease;
 }
 
 #abouticon1 {
@@ -258,17 +258,48 @@ main {
     transform: scale(1.02);
 }
 
-#project1 {
+#project1,
+#project7 {
     background-image: url('../images/illustrative/bg1.jpg');
-    /* padding: 30px 20px !important; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#project2 {
+#project2,
+#project8 {
     background-image: url('../images/illustrative/bg2.jpg');
-    padding: 30px 20px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project3,
+#project9 {
+    background-image: url('../images/illustrative/bg3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project4,
+#project10 {
+    background-image: url('../images/illustrative/bg4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project5,
+#project11 {
+    background-image: url('../images/illustrative/bg5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project6 {
+    background-image: url('../images/illustrative/bg6.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -297,10 +328,61 @@ main {
     border: 1px solid;
     padding: 2px 7px;
     border-radius: 30px;
-    font: 500 13px var(--textfont);
-    /* background-color:var(--themecolor); */
+    font: 500 14px var(--textfont);
+    background-color: rgba(0, 127, 114, 0.135);
 }
 
+/* ==== contact ==== */
+#contact {
+    background-color: var(--lightcolor);
+}
+
+#contacthead {
+    font: 700 48px var(--headfont);
+    color: var(--blackcolor);
+}
+
+#contacthead span {
+    color: var(--themecolor);
+}
+
+#formbtn {
+    background-color: var(--themecolor);
+    font: 600 14px var(--headfont);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 100px;
+    transition: all .3s ease;
+}
+
+input,
+textarea {
+    border: 2px solid var(--themecolor) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font: 400 13px var(--textfont);
+}
+
+#formbtn:hover {
+    box-shadow: 0px 0px 25px var(--themecolor);
+}
+
+/* ==== footer ==== */
+#footer {
+    margin: 40px 0px 20px;
+}
+
+#foottext {
+    font: 500 16px var(--textfont);
+    color: var(--blackcolor);
+}
+
+#foottext span {
+    color: var(--themecolor);
+    font-family: var(--headfont);
+}
 
 
 
@@ -312,7 +394,9 @@ main {
     #about,
     #eduhead,
     #skills,
-    #project {
+    #project,
+    #contact,
+    #footer {
         padding: 0px 24px !important;
     }
 
@@ -328,7 +412,9 @@ main {
     #about,
     #eduhead,
     #skills,
-    #project {
+    #project,
+    #contact,
+    #footer {
         padding: 0px 93px !important;
     }
 
@@ -385,7 +471,9 @@ main {
     #about,
     #eduhead,
     #skills,
-    #project {
+    #project,
+    #contact,
+    #footer {
         padding: 0px 130px !important;
     }
 
@@ -422,7 +510,9 @@ main {
     #about,
     #eduhead,
     #skills,
-    #project {
+    #project,
+    #contact,
+    #footer {
         padding: 0px 230px !important;
     }
 

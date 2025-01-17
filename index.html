@@ -18,6 +18,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "EiA3EweT9XXASgaHW",
+            });
+        })();
+    </script>
 </head>
 
 <body class="conta">
@@ -35,22 +44,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active mx-2" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active mx-2" aria-current="page" href="#herosection">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">About</a>
+                            <a class="nav-link mx-2" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Education</a>
+                            <a class="nav-link mx-2" href="#education">Education</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Skills</a>
+                            <a class="nav-link mx-2" href="#skills">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Projects</a>
+                            <a class="nav-link mx-2" href="#project">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Contact</a>
+                            <a class="nav-link mx-2" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -75,8 +84,8 @@
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe corrupti dolorem molestiae
                             cupiditate non natus adipisci nesciunt ipsa magni eos?
                         </p>
-                        <a href="#" class="text-decoration-none herobtn me-2">Hire me</a>
-                        <a href="#" class="text-decoration-none herobtn mx-2">Projects</a>
+                        <a href="#contact" class="text-decoration-none herobtn me-2">Hire me</a>
+                        <a href="#project" class="text-decoration-none herobtn mx-2">Projects</a>
                     </div>
                 </section>
             </div>
@@ -98,10 +107,10 @@
                             sapiente, nulla unde ex tempore voluptatibus quibusdam esse harum ipsum temporibus
                             molestiae. Repellat, soluta.
                         </p>
-                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-github abouticon me-2"
-                                id="abouticon1"></i></a>
-                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-linkedin-in abouticon mx-2"
-                                id="abouticon2"></i></a>
+                        <a href="https://github.com/OmPimpale" class="text-decoration-none" target="_blank"><i
+                                class="fa-brands fa-github abouticon me-2" id="abouticon1"></i></a>
+                        <a href="https://www.linkedin.com/in/om-pimpale-83a524279" class="text-decoration-none"
+                            target="_blank"><i class="fa-brands fa-linkedin-in abouticon mx-2" id="abouticon2"></i></a>
                     </div>
                     <div class="col d-none d-lg-inline">
                         <img src="./images/background/avtar3.png" alt="avtra" class="img-fluid">
@@ -163,7 +172,7 @@
 
         <!-- ==== skills ==== -->
         <section class="row" id="skills">
-            <div class="col">
+            <div class="col my-5">
                 <h2 id="skillhead" class="text-center"><span>S</span>kills</h2>
                 <section class="row">
                     <div class="col">
@@ -181,21 +190,20 @@
 
                     <!-- first project -->
                     <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
-                        <section class="row p-3 projectcard rounded-3">
-                            <div class="col-12 p-3 rounded-3" id="project1">
-                                <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank"
-                                    class="">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project1">
                                     <img src="./images/illustrative/1.png" alt="project1"
                                         class="img-fluid projectimg rounded-3">
-                                </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank"
                                     class="text-decoration-none">
                                     <h3 class="projectname mb-0"><span>Apzo</span> Virtual Reality</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Apzo---VR---Web-Template.git" target="_blank"><i
-                                        class="fa-brands fa-github gitlogo"></i></a>
+                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -203,30 +211,32 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
+                                <div class="d-inline learn">HTML</div>
                                 <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">ResponsiveDesign</div>
+                                <div class="d-inline ms-1 learn">jQuery</div>
+                                <!-- <div class="d-inline mx-1 learn">JavaScript</div> -->
                             </div>
                         </section>
                     </div>
 
                     <!-- second project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3 mt-md-0">
-                        <section class="row p-3 projectcard rounded-3" onmouseover="cardGive2()"
-                            onmouseleave="cardRemove2()">
-                            <div class="col-12 px-0  rounded-3" id="project2">
-                                <a href="https://ompimpale.github.io/Javelin---Home-Fitness-Web-Template/"
-                                    target="_blank" class="">
-                                    <img src="./images/illustrative/2.png" alt="project2" class="img-fluid projectimg">
-                                </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0 h-100">
+                        <section class="row p-3 projectcard rounded-3">
+                            <a href="https://ompimpale.github.io/Javelin---Home-Fitness-Web-Template/" target="_blank"
+                                class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project2">
+                                    <img src="./images/illustrative/2.png" alt="project2"
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://ompimpale.github.io/Javelin---Home-Fitness-Web-Template/"
                                     target="_blank" class="text-decoration-none">
-                                    <h3 class="projectname mb-0"><span>Jevelin</span> Hoome Fitness</h3>
+                                    <h3 class="projectname mb-0"><span>Jevelin</span> Home Fitness</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Javelin---Home-Fitness-Web-Template.git"
-                                    target="_blank"><i class="fa-brands fa-github gitlogo"></i></a>
+                                    target="_blank"><i class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -234,31 +244,31 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
+                                <div class="d-inline learn">HTML</div>
                                 <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">ResponsiveDesign</div>
+                                <div class="d-inline ms-1 learn">AOS</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- third project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project3" onmouseover="cardGive3()"
-                            onmouseleave="cardRemove3()">
-                            <div class="col-12 px-0">
-                                <a href="https://ompimpale.github.io/Winns_Digital_Agency---Web-Template/"
-                                    target="_blank" class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://ompimpale.github.io/Winns_Digital_Agency---Web-Template/" target="_blank"
+                                class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project3">
                                     <img src="./images/illustrative/3.png" alt="project3"
-                                        class="img-fluid rounded-3 projectimg">
-                                </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://ompimpale.github.io/Winns_Digital_Agency---Web-Template/"
                                     target="_blank" class="text-decoration-none">
                                     <h3 class="projectname mb-0"><span>Winns</span> Digital Agency</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Winns_Digital_Agency---Web-Template.git"
-                                    target="_blank"><i class="fa-brands fa-github gitlogo"></i></a>
+                                    target="_blank"><i class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -266,31 +276,33 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
+                                <div class="d-inline learn">HTML</div>
                                 <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">Bootstrap</div>
+                                <div class="d-inline mx-1 learn">BootstrapGridSystem</div>
+                                <div class="d-inline learn">jQuery</div>
+                                <div class="d-inline ms-1 learn">AOS</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- fourth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project4" onmouseover="cardGive4()"
-                            onmouseleave="cardRemove4()">
-                            <div class="col-12 px-0">
-                                <a href="https://ompimpale.github.io/Eroox_Gaming_-_eSports-Web_Template/"
-                                    target="_blank" class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://ompimpale.github.io/Eroox_Gaming_-_eSports-Web_Template/" target="_blank"
+                                class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project4">
                                     <img src="./images/illustrative/4.png" alt="project4"
-                                        class="img-fluid rounded-3 projectimg">
-                                </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://ompimpale.github.io/Eroox_Gaming_-_eSports-Web_Template/"
                                     target="_blank" class="text-decoration-none">
                                     <h3 class="projectname mb-0"><span>Eroox</span> Gaming & eSports</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Eroox_Gaming_-_eSports-Web_Template.git"
-                                    target="_blank"><i class="fa-brands fa-github gitlogo"></i></a>
+                                    target="_blank"><i class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -298,31 +310,32 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
+                                <div class="d-inline learn">HTML</div>
                                 <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">Bootstrap</div>
+                                <div class="d-inline mx-1 learn">BootstrapGridSystem</div>
+                                <div class="d-inline learn">AOS</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- fifth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project5" onmouseover="cardGive5()"
-                            onmouseleave="cardRemove5()">
-                            <div class="col-12 px-0">
-                                <a href="https://ompimpale.github.io/Neura---Web_Template/index.html" target="_blank"
-                                    class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://ompimpale.github.io/Neura---Web_Template/index.html" target="_blank"
+                                class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project5">
                                     <img src="./images/illustrative/5.png" alt="project5"
-                                        class="img-fluid rounded-3 projectimg">
-                                </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://ompimpale.github.io/Neura---Web_Template/index.html" target="_blank"
                                     class="text-decoration-none">
-                                    <h3 class="projectname mb-0"><span>Neura</span> AI Template</h3>
+                                    <h3 class="projectname mb-0"><span>Neura</span> Artificial Inteligence</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Neura---Web_Template.git" target="_blank"><i
-                                        class="fa-brands fa-github gitlogo"></i></a>
+                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -330,30 +343,32 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
+                                <div class="d-inline learn">HTML</div>
                                 <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">Bootstrap</div>
+                                <div class="d-inline mx-1 learn">BootstrapGridSystem</div>
+                                <div class="d-inline learn">MultiPageTemplate</div>
+                                <div class="d-inline ms-1 learn">jQuery</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- sixeth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project6" onmouseover="cardGive6()"
-                            onmouseleave="cardRemove6()">
-                            <div class="col-12 px-0">
-                                <a href="https://om-pimpale-props.netlify.app/" target="_blank" class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://om-pimpale-props.netlify.app/" target="_blank" class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project6">
                                     <img src="./images/illustrative/6.png" alt="project6"
-                                        class="img-fluid rounded-3 projectimg">
-                                </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://om-pimpale-props.netlify.app/" target="_blank"
                                     class="text-decoration-none">
                                     <h3 class="projectname mb-0"><span>Sierra</span> Nature</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Sierra_Natural_Parks_Props.git" target="_blank"><i
-                                        class="fa-brands fa-github gitlogo"></i></a>
+                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -361,30 +376,29 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
-                                <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">React.js</div>
+                                <div class="d-inline mx-1 learn">props</div>
+                                <div class="d-inline learn">JavaScript</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- seventh project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project7" onmouseover="cardGive7()"
-                            onmouseleave="cardRemove7()">
-                            <div class="col-12 px-0">
-                                <a href="https://om-pimpale-router.netlify.app/" target="_blank" class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://om-pimpale-router.netlify.app/" target="_blank" class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project7">
                                     <img src="./images/illustrative/7.png" alt="project7"
-                                        class="img-fluid rounded-3 projectimg">
-                                </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://om-pimpale-router.netlify.app/" target="_blank"
                                     class="text-decoration-none">
-                                    <h3 class="projectname mb-0"><span>Hideaway</span> Resort</h3>
+                                    <h3 class="projectname mb-0"><span>Hideawat</span> Resort</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Hideaway_Router_Template.git" target="_blank"><i
-                                        class="fa-brands fa-github gitlogo"></i></a>
+                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -392,30 +406,29 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
-                                <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">React.js</div>
+                                <div class="d-inline mx-1 learn">ReactRouter</div>
+                                <div class="d-inline learn">JavaScript</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- eighth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project8" onmouseover="cardGive8()"
-                            onmouseleave="cardRemove8()">
-                            <div class="col-12 px-0">
-                                <a href="https://ompimpale.github.io/Crose_Chruch_Site/" target="_blank" class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://ompimpale.github.io/Crose_Chruch_Site/" target="_blank" class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project8">
                                     <img src="./images/illustrative/8.png" alt="project8"
-                                        class="img-fluid rounded-3 projectimg">
-                                </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://ompimpale.github.io/Crose_Chruch_Site/" target="_blank"
                                     class="text-decoration-none">
                                     <h3 class="projectname mb-0"><span>Crose</span> Church</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Crose_Chruch_Site.git" target="_blank"><i
-                                        class="fa-brands fa-github gitlogo"></i></a>
+                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -424,27 +437,29 @@
                                     eos dolor maxime?
                                 </p>
                                 <div class="d-inline me-1 learn">HTML</div>
-                                <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">CSS</div>
+                                <div class="d-inline mx-1 learn">ResponsiveDesign</div>
+                                <div class="d-inline learn">JavaScript</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- ninth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project9" onmouseover="cardGive9()"
-                            onmouseleave="cardRemove9()">
-                            <div class="col-12 px-0">
-                                <a href="#" class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project9">
                                     <img src="./images/illustrative/1.png" alt="project9"
-                                        class="img-fluid rounded-3 projectimg">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
+                                <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank"
+                                    class="text-decoration-none">
+                                    <h3 class="projectname mb-0"><span>Apzo</span> Virtual Reality</h3>
                                 </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="projectname mb-0">Lorem.</h3>
-                                </a>
-                                <a href="#"><i class="fa-brands fa-github gitlogo"></i></a>
+                                <a href="https://github.com/OmPimpale/Apzo---VR---Web-Template.git" target="_blank"><i
+                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -452,28 +467,29 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
+                                <div class="d-inline learn">HTML</div>
                                 <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">Medial Query</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- tenth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project10" onmouseover="cardGive10()"
-                            onmouseleave="cardRemove10()">
-                            <div class="col-12 px-0">
-                                <a href="#" class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project10">
                                     <img src="./images/illustrative/1.png" alt="project10"
-                                        class="img-fluid rounded-3 projectimg">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
+                                <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank"
+                                    class="text-decoration-none">
+                                    <h3 class="projectname mb-0"><span>Apzo</span> Virtual Reality</h3>
                                 </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="projectname mb-0">Lorem.</h3>
-                                </a>
-                                <a href="#"><i class="fa-brands fa-github gitlogo"></i></a>
+                                <a href="https://github.com/OmPimpale/Apzo---VR---Web-Template.git" target="_blank"><i
+                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -481,28 +497,29 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
+                                <div class="d-inline learn">HTML</div>
                                 <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">Medial Query</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- eleventh project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3" id="project11" onmouseover="cardGive11()"
-                            onmouseleave="cardRemove11()">
-                            <div class="col-12 px-0">
-                                <a href="#" class="">
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
+                            <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
+                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project11">
                                     <img src="./images/illustrative/1.png" alt="project11"
-                                        class="img-fluid rounded-3 projectimg">
+                                        class="img-fluid projectimg rounded-3">
+                                </div>
+                            </a>
+                            <div class="col-12 my-3 d-flex justify-content-between">
+                                <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank"
+                                    class="text-decoration-none">
+                                    <h3 class="projectname mb-0"><span>Apzo</span> Virtual Reality</h3>
                                 </a>
-                            </div>
-                            <div class="col-12 my-3 d-flex justify-content-between align-items-center">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="projectname mb-0">Lorem.</h3>
-                                </a>
-                                <a href="#"><i class="fa-brands fa-github gitlogo"></i></a>
+                                <a href="https://github.com/OmPimpale/Apzo---VR---Web-Template.git" target="_blank"><i
+                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
@@ -510,9 +527,9 @@
                                     sunt
                                     eos dolor maxime?
                                 </p>
-                                <div class="d-inline me-1 learn">HTML</div>
+                                <div class="d-inline learn">HTML</div>
                                 <div class="d-inline mx-1 learn">CSS</div>
-                                <div class="d-inline mx-1 learn">Medial Query</div>
+                                <div class="d-inline learn">Medial Query</div>
                             </div>
                         </section>
                     </div>
@@ -520,7 +537,49 @@
             </div>
         </section>
 
+        <!-- ==== contact ==== -->
+        <section class="row" id="contact">
+            <div class="col my-5">
+                <h2 id="contacthead" class="text-center mb-4 mb-lg-5"><span>Contact</span> Me</h2>
+                <section class="row justify-content-center">
+                    <div class="col-lg-10 col-xxl-8">
+                        <form action="" class="text-center">
+                            <div class="d-lg-flex">
+                                <input type="text" placeholder="Full Name" class="form-control my-lg-2 me-lg-1 py-2"
+                                    id="name" required>
+                                <input type="email" placeholder="Email Address" class="form-control my-2 ms-lg-1 py-2"
+                                    id="email" required>
+                            </div>
+                            <div class="d-lg-flex">
+                                <input type="tel" placeholder="Phone Number" class="form-control my-lg-2 me-lg-1 py-2"
+                                    id="mobno" required>
+                                <input type="text" placeholder="subject" class="form-control my-2 ms-lg-1 py-2"
+                                    id="subject" required>
+                            </div>
+                            <textarea placeholder="Your Message" rows="6" class="form-control py-3 mt-lg-3" id="msg"
+                                required></textarea>
+                            <button class="btn m-4" type="submit" id="formbtn" onclick="sendMail()">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </section>
+
     </main>
+
+    <footer>
+        <!-- ==== footer ==== -->
+        <section class="row" id="footer">
+            <div class="col">
+                <section class="row">
+                    <div class="col text-center">
+                        <p id="foottext">&copy; 2024 All Rights Reserved | <span>Om Pimpale (PP-113)</span></p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
