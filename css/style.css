@@ -40,6 +40,8 @@ main {
     filter: drop-shadow(0 0 25px var(--themecolor));
     animation: mymove 5s ease-in-out infinite;
     transition: all .3s ease;
+    width: 80%;
+    height: 95%;
 }
 
 #heroimg:hover {
@@ -329,7 +331,7 @@ main {
     padding: 2px 7px;
     border-radius: 30px;
     font: 500 14px var(--textfont);
-    background-color: rgba(0, 127, 114, 0.135);
+    background-color: rgba(0, 127, 114, 0.108);
 }
 
 /* ==== contact ==== */
