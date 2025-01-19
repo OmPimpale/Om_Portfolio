@@ -21,6 +21,10 @@ main {
     background-color: var(--themecolor) !important;
 }
 
+#navimg{
+    width: 1.5em;
+}
+
 #navlogo {
     color: var(--whitecolor);
     font: 700 24px var(--headfont);
