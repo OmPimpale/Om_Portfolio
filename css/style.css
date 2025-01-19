@@ -33,6 +33,11 @@ main {
 .nav-link {
     font: 700 17px var(--headfont) !important;
     color: var(--whitecolor) !important;
+    transition: all .5s;
+}
+
+.nav-link:hover{
+    color: var(--blackcolor) !important;
 }
 
 /* ==== herosection ==== */
