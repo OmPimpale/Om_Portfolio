@@ -7,6 +7,10 @@
     --blackcolor: black;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     overflow: hidden;
     /* For animations */
@@ -137,10 +141,14 @@ main {
     padding: 8.4px 9.78px;
 }
 
+#abouticon3 {
+    padding: 8.4px 9.78px;
+}
+
 .abouticon:hover {
     color: var(--whitecolor);
     background-color: var(--themecolor);
-    transform: scale(1.15) translateY(-10px);
+    transform: scale(1.175) translateY(-10px);
     box-shadow: 0 0 25px var(--themecolor);
 }
 
@@ -152,10 +160,29 @@ main {
 #eduhead {
     font: 700 48px var(--headfont);
     color: var(--blackcolor);
+    padding: 0px !important;
 }
 
 #eduhead span {
     color: var(--themecolor);
+}
+
+#book {
+    width: 150px;
+    /* transform: rotate(-10deg); */
+    animation: book 5s ease-in-out infinite;
+}
+
+@keyframes book {
+
+    0%,
+    100% {
+        transform: scale(.8);
+    }
+
+    50% {
+        transform: scale(1);
+    }
 }
 
 /* timeline */
@@ -183,7 +210,7 @@ main {
 
 .timeline ul li span {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 127, 114, 0.4);
     border-radius: 25px;
     padding: 3px 6px;
     /* font-size: 15px; */
@@ -217,6 +244,7 @@ main {
 
 .timeline ul li:hover {
     background-color: var(--lightcolor);
+    border-radius: 10px;
 }
 
 /* ==== skills ==== */
@@ -233,6 +261,104 @@ main {
 #skillhead span {
     color: var(--themecolor);
 }
+
+.skillbar {
+    border: 2px solid var(--themecolor);
+    margin: 5px;
+    padding: 10px 10px 0px;
+    /* background-color: #007f7220; */
+    background-color: rgba(0, 127, 114, 0.108);
+    border-radius: 10px;
+}
+
+/* .skillbar:hover{
+    
+} */
+
+/* progressbar */
+.progress-title {
+    font: 700 18px var(--textfont);
+    color: var(--blackcolor);
+    margin: 0 0 15px;
+}
+
+.progress {
+    height: 17px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    overflow: visible;
+    position: relative;
+}
+
+.progress .progress-bar {
+    border-radius: 15px;
+    box-shadow: none;
+    position: relative;
+    animation: animate-positive 2s;
+}
+
+.progress .progress-icon,
+.progress .progress-value {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 37.5px;
+    background: #fff;
+    border: 7px solid #4CCD99;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--themecolor);
+    position: absolute;
+    top: -17px;
+    right: -5px;
+}
+
+.progress .progress-icon {
+    right: auto;
+    left: -5px;
+}
+
+.skillicon {
+    font-size: 22px;
+    color: #003c36;
+}
+
+/* .progress.orange .progress-icon,
+.progress.orange .progress-value {
+    border: 7px solid green;
+    color: red;
+} */
+
+/* .progress.pink .progress-icon,
+.progress.pink .progress-value {
+    border: 7px solid black;
+    color: #f2438f;
+} */
+
+/* .progress.green .progress-icon,
+.progress.green .progress-value {
+    border: 7px solid cyan;
+    color: #08a061;
+} */
+
+@-webkit-keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+
+/* .skillbar i{
+    font-size: 100px;
+    position: relative;
+    left: 460px;
+} */
 
 /* ==== project ==== */
 #project {
@@ -456,7 +582,16 @@ textarea::placeholder {
         font-size: 53px;
     }
 
+    .timeline ul li {
+        width: 110%;
+    }
+
     /* ==== skills ==== */
+    .skillbar{
+        margin: 10px;
+        padding: 15px 15px 0px;
+    }
+    
     #skillhead {
         font-size: 53px;
     }
@@ -518,6 +653,9 @@ textarea::placeholder {
         padding: 0px 230px !important;
     }
 
-    /* ==== navbar ==== */
+    /* ==== education ==== */
+    #book{
+        margin-right: 350px;
+    }
 
 }

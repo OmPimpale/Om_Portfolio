@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -33,8 +36,8 @@
 
     <header>
         <!-- ==== navbar ==== -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid" id="">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#" id="navlogo">OmPimpale.</a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -92,9 +95,9 @@
         </section>
 
         <!-- ==== about ==== -->
-        <section class="row py-5" id="about">
+        <section class="row" id="about">
             <div class="col">
-                <section class="row justify-content-center">
+                <section class="row justify-content-center mb-5">
                     <div class="col-12 col-md-8 mb-4 d-lg-none">
                         <img src="./images/background/avtar3.png" alt="avtra" class="img-fluid">
                     </div>
@@ -111,6 +114,9 @@
                                 class="fa-brands fa-github abouticon me-2" id="abouticon1"></i></a>
                         <a href="https://www.linkedin.com/in/om-pimpale-83a524279" class="text-decoration-none"
                             target="_blank"><i class="fa-brands fa-linkedin-in abouticon mx-2" id="abouticon2"></i></a>
+                        <a href="https://maps.app.goo.gl/WKySXUzw7oPPiG5T6" class="text-decoration-none"
+                            target="_blank"><i class="fa-solid fa-location-arrow abouticon mx-2"
+                                id="abouticon3"></i></a>
                     </div>
                     <div class="col d-none d-lg-inline">
                         <img src="./images/background/avtar3.png" alt="avtra" class="img-fluid">
@@ -124,7 +130,7 @@
             <div class="col">
                 <section class="row justify-content-center">
                     <h2 id="eduhead" class="text-center mb-4"><span>E</span>ducation</h2>
-                    <div class="col-12 col-lg-9 col-xxl-7">
+                    <div class="col-12 col-lg-9 col-xxl-9 d-xxl-flex align-items-center">
                         <div class="timeline pb-0 mx-auto">
                             <ul class="mb-0">
                                 <li>
@@ -165,19 +171,203 @@
                                 </li>
                             </ul>
                         </div>
+                        <img src="./images/illustrative/book.svg" alt="book" class="img-fluid d-none d-xxl-inline" id="book">
+                                                <!-- <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                        <lord-icon src="https://cdn.lordicon.com/bdnahcds.json" trigger="loop" delay="2000"
+                            state="morph-open"
+                            colors="primary:#121331,secondary:#ebe6ef,tertiary:#d5fdf9,quaternary:#007f73,quinary:#f9c9c0,senary:#3a3347"
+                            style="width:250px;height:250px">
+                        </lord-icon> -->
                     </div>
                 </section>
             </div>
         </section>
 
         <!-- ==== skills ==== -->
-        <section class="row" id="skills">
-            <div class="col my-5">
-                <h2 id="skillhead" class="text-center"><span>S</span>kills</h2>
-                <section class="row">
-                    <div class="col">
-
+        <section class="row justify-content-center" id="skills">
+            <div class="col-11 col-md-12 my-5">
+                <h2 id="skillhead" class="text-center mb-4 mb-lg-5"><span>S</span>kills</h2>
+                <section class="row justify-content-center">
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon1()" onmouseleave="iconRemove1()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">HTML5</h3>
+                            <i class="fa-brands fa-html5 skillicon" id="skillicon1"></i>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:87%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-brands fa-html5"></i></span> -->
+                                <div class="progress-value"><span>87</span>%</div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon2()" onmouseleave="iconRemove2()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">CSS3</h3>
+                            <i class="fa-brands fa-css3-alt skillicon" id="skillicon2"></i>
+                        </div>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:83%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-brands fa-css3-alt"></i></span> -->
+                                <div class="progress-value"><span>83</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon3()" onmouseleave="iconRemove3()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">Responsive Web Designing</h3>
+                            <i class="fa-solid fa-laptop-code skillicon" id="skillicon3"></i>
+                        </div>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:94%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-solid fa-laptop-code"></i></span> -->
+                                <div class="progress-value"><span>94</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon4()" onmouseleave="iconRemove4()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">JavaScript / jQuery </h3>
+                            <i class="fa-brands fa-js skillicon" id="skillicon4"></i>
+                        </div>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:76%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-brands fa-js"></i></span> -->
+                                <div class="progress-value"><span>76</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon5()" onmouseleave="iconRemove5()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">Bootstrap 5</h3>
+                            <i class="fa-brands fa-bootstrap skillicon" id="skillicon5"></i>
+                        </div>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:88%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-brands fa-bootstrap"></i></span> -->
+                                <div class="progress-value"><span>88</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon6()" onmouseleave="iconRemove6()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">ReactJS</h3>
+                            <i class="fa-brands fa-react skillicon" id="skillicon6"></i>
+                        </div>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:86%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-brands fa-react"></i></span> -->
+                                <div class="progress-value"><span>86</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon7()" onmouseleave="iconRemove7()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">Core Java</h3>
+                            <i class="fa-brands fa-java skillicon" id="skillicon7"></i>
+                        </div>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-brands fa-java"></i></span> -->
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon8()" onmouseleave="iconRemove8()">
+                        <h3 class="progress-title me-2">Advanced Java</h3>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"></span> -->
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon9()" onmouseleave="iconRemove9()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">MySQL</h3>
+                            <i class="fa-solid fa-database skillicon" id="skillicon9"></i>
+                        </div>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-solid fa-database"></i></span> -->
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon10()" onmouseleave="iconRemove10()">
+                        <h3 class="progress-title">Spring</h3>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"></span> -->
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon11()" onmouseleave="iconRemove11()">
+                        <h3 class="progress-title">Spring Boot</h3>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"></span> -->
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon12()" onmouseleave="iconRemove12()">
+                        <h3 class="progress-title">Hibernate</h3>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"></span> -->
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon13()" onmouseleave="iconRemove13()">
+                        <div class="d-flex">
+                            <h3 class="progress-title me-2">Git and GitHub</h3>
+                            <i class="fa-brands fa-github skillicon" id="skillicon13"></i>
+                        </div>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"><i class="fa-brands fa-github"></i></span> -->
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skillbar" onmouseover="icon14()" onmouseleave="iconRemove14()">
+                        <h3 class="progress-title">Redux</h3>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
+                                <!-- <span class="progress-icon"></span> -->
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-12 col-md-6">
+                        <h3 class="progress-title">Problem Solving</h3>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#f7810e;">
+                                <span class="progress-icon fa fa-rocket"></span>
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h3 class="progress-title">Operating System</h3>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#f7810e;">
+                                <span class="progress-icon fa fa-rocket"></span>
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h3 class="progress-title">Computer Networking</h3>
+                        <div class="progress orange">
+                            <div class="progress-bar" style="width:90%; background:#f7810e;">
+                                <span class="progress-icon fa fa-rocket"></span>
+                                <div class="progress-value"><span>90</span>%</div>
+                            </div>
+                        </div>
+                    </div> -->
                 </section>
             </div>
         </section>
@@ -221,8 +411,8 @@
                     </div>
 
                     <!-- second project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0 h-100">
-                        <section class="row p-3 projectcard rounded-3">
+                    <div class="col-12 col-md-5 my-2 m-md-3 mt-md-0">
+                        <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Javelin---Home-Fitness-Web-Template/" target="_blank"
                                 class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project2">
@@ -254,7 +444,7 @@
                     </div>
 
                     <!-- third project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Winns_Digital_Agency---Web-Template/" target="_blank"
                                 class="p-0">
@@ -289,7 +479,7 @@
                     </div>
 
                     <!-- fourth project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Eroox_Gaming_-_eSports-Web_Template/" target="_blank"
                                 class="p-0">
@@ -323,7 +513,7 @@
                     </div>
 
                     <!-- fifth project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Neura---Web_Template/index.html" target="_blank"
                                 class="p-0">
@@ -358,7 +548,7 @@
                     </div>
 
                     <!-- sixeth project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://om-pimpale-props.netlify.app/" target="_blank" class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project6">
@@ -389,7 +579,7 @@
                     </div>
 
                     <!-- seventh project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://om-pimpale-router.netlify.app/" target="_blank" class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project7">
@@ -420,7 +610,7 @@
                     </div>
 
                     <!-- eighth project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Crose_Chruch_Site/" target="_blank" class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project8">
@@ -452,7 +642,7 @@
                     </div>
 
                     <!-- ninth project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project9">
@@ -483,7 +673,7 @@
                     </div>
 
                     <!-- tenth project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project10">
@@ -514,7 +704,7 @@
                     </div>
 
                     <!-- eleventh project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0">
+                    <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project11">
