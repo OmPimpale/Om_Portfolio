@@ -21,7 +21,37 @@ main {
     background-color: var(--themecolor) !important;
 }
 
-#navimg{
+#nav {
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.sticky-animate {
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#navimg {
     width: 1.5em;
 }
 
@@ -40,7 +70,7 @@ main {
     transition: all .5s;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: var(--blackcolor) !important;
 }
 
@@ -91,7 +121,8 @@ main {
 }
 
 #herotext {
-    font: 400 13px var(--textfont);
+    font: 400 14px var(--textfont);
+    line-height: 20px;
 }
 
 .herobtn {
@@ -131,7 +162,8 @@ main {
 }
 
 #abouttext {
-    font: 400 13px var(--textfont);
+    font: 400 14px var(--textfont);
+    line-height: 20px;
 }
 
 .abouticon {
@@ -151,7 +183,7 @@ main {
 }
 
 #abouticon3 {
-    padding: 8.4px 9.78px;
+    padding: 8.4px 8.4px;
 }
 
 .abouticon:hover {
@@ -177,7 +209,7 @@ main {
 }
 
 #book {
-    width: 175px;
+    width: 225px;
     /* transform: rotate(-10deg); */
     animation: book 5s ease-in-out infinite;
 }
@@ -275,7 +307,6 @@ main {
     border: 2px solid var(--themecolor);
     margin: 5px;
     padding: 10px 10px 0px;
-    /* background-color: #007f7220; */
     background-color: rgba(0, 127, 114, 0.108);
     border-radius: 10px;
 }
@@ -452,7 +483,7 @@ main {
 }
 
 .gitlogo {
-    font-size: 21px;
+    font-size: 22px;
     color: var(--blackcolor);
 }
 
@@ -464,7 +495,8 @@ main {
 .learn {
     border: 1px solid;
     padding: 2px 7px;
-    border-radius: 30px;
+    border-radius: 5px !important;
+    margin: 2.5px 0px;
     font: 500 14px var(--textfont);
     background-color: rgba(0, 127, 114, 0.108);
 }
@@ -570,7 +602,7 @@ textarea::placeholder {
     }
 
     #herotext {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     /* ==== about ==== */
@@ -583,7 +615,7 @@ textarea::placeholder {
     }
 
     #abouttext {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     /* ==== education ==== */
@@ -596,11 +628,11 @@ textarea::placeholder {
     }
 
     /* ==== skills ==== */
-    .skillbar{
+    .skillbar {
         margin: 10px;
         padding: 15px 15px 0px;
     }
-    
+
     #skillhead {
         font-size: 53px;
     }
@@ -663,7 +695,7 @@ textarea::placeholder {
     }
 
     /* ==== education ==== */
-    #book{
+    #book {
         margin-right: 350px;
     }
 

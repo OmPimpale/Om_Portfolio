@@ -1,4 +1,30 @@
 // ==== navbar code ====
+let scrollTimeout;
+let hasAnimated = false;
+
+window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("nav");
+    const stickyOffset = navbar.offsetTop;
+
+    if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+    }
+
+    scrollTimeout = setTimeout(function () {
+        if (window.scrollY > stickyOffset) {
+            navbar.classList.add("sticky");
+
+            if (!hasAnimated) {
+                navbar.classList.add("sticky-animate");
+                hasAnimated = true;
+            }
+        } else {
+            navbar.classList.remove("sticky");
+            navbar.classList.remove("sticky-animate");
+            hasAnimated = false;
+        }
+    }, 100);
+});
 
 // ==== progress bar ====
 $(document).ready(function () {
@@ -182,6 +208,18 @@ let icon14 = () => {
 
 let iconRemove14 = () => {
     let animate = document.getElementById("skillicon14");
+    animate.style.transition = "all 1.2s ease";
+    animate.style.transform = "rotateY(-360deg)";
+}
+
+let icon15 = () => {
+    let animate = document.getElementById("skillicon15");
+    animate.style.transition = "all .8s ease";
+    animate.style.transform = "rotateY(360deg) scale(1.3)";
+}
+
+let iconRemove15 = () => {
+    let animate = document.getElementById("skillicon15");
     animate.style.transition = "all 1.2s ease";
     animate.style.transform = "rotateY(-360deg)";
 }
