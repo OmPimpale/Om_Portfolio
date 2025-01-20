@@ -188,39 +188,38 @@ let iconRemove14 = () => {
 
 
 // ==== email integration code ====
+// Function to send an email using EmailJS
 let sendMail = () => {
+    // Collect form input values
     let parms = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         num: document.getElementById("mobno").value,
         subject: document.getElementById("subject").value,
         message: document.getElementById("msg").value
-    }
+    };
 
-    let a = document.getElementById("name").value;
-    let b = document.getElementById("email").value;
-    let c = document.getElementById("mobno").value;
-    let d = document.getElementById("subject").value;
-    let e = document.getElementById("msg").value;
-
-    if (a || b || c || d || e == "") {
+    // Check if any input field is empty
+    if (parms.name === "" || parms.email === "" || parms.num === "" || parms.subject === "" || parms.message === "") {
         alert("Enter Valid Information!!!");
-        return false;
+        return false; // Prevent sending if any field is empty
     }
 
-    emailjs.send("service_6sojt7z", "template_pjfu4xf", parms).then(alert("Email Sent Successfully!!"));
-
+    // Send email using EmailJS service
+    emailjs.send("service_6sojt7z", "template_pjfu4xf", parms)
+        .then(() => {
+            alert("Email Sent Successfully!!"); // Show success message after email is sent
+        })
+        .catch((error) => {
+            console.error('Email sending failed:', error); // Log any error
+            alert("Failed to send email. Please try again.");
+        });
 }
 
+// Event listener for form submission
 window.onload = function () {
     document.getElementById('contactform').addEventListener('submit', function (event) {
-        event.preventDefault();
-        // these IDs from the previous steps
-        emailjs.sendForm('service_6sojt7z', 'template_pjfu4xf', this)
-            .then(() => {
-                console.log('SUCCESS!');
-            }, (error) => {
-                console.log('FAILED...', error);
-            });
+        event.preventDefault(); // Prevent default form submission
+        sendMail(); // Call sendMail function on form submit
     });
 }

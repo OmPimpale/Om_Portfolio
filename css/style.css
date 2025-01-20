@@ -177,7 +177,7 @@ main {
 }
 
 #book {
-    width: 150px;
+    width: 175px;
     /* transform: rotate(-10deg); */
     animation: book 5s ease-in-out infinite;
 }
