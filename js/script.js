@@ -1,228 +1,98 @@
 // ==== navbar code ====
-let scrollTimeout;
 let hasAnimated = false;
+const navbar = document.getElementById("nav");
+const stickyOffset = navbar.offsetTop;
 
-window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("nav");
-    const stickyOffset = navbar.offsetTop;
+window.addEventListener("scroll", debounce(() => {
+    if (window.scrollY > stickyOffset) {
+        navbar.classList.add("sticky");
 
-    if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-    }
-
-    scrollTimeout = setTimeout(function () {
-        if (window.scrollY > stickyOffset) {
-            navbar.classList.add("sticky");
-
-            if (!hasAnimated) {
-                navbar.classList.add("sticky-animate");
-                hasAnimated = true;
-            }
-        } else {
-            navbar.classList.remove("sticky");
-            navbar.classList.remove("sticky-animate");
-            hasAnimated = false;
+        if (!hasAnimated) {
+            navbar.classList.add("sticky-animate");
+            hasAnimated = true;
         }
-    }, 100);
-});
+    } else {
+        navbar.classList.remove("sticky", "sticky-animate");
+        hasAnimated = false;
+    }
+}, 100));
+
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+// let active1=()=>{
+//     let element = document.getElementById("home");
+//     element.classList.add("on");
+// }
+
+// let active2=()=>{
+//     let element = document.getElementById("edu");
+//     element.classList.add("on");
+// }
+
+
 
 // ==== progress bar ====
 $(document).ready(function () {
     $('.progress-value > span').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 1500,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
+        const $this = $(this);
+        const targetValue = parseInt($this.text(), 10) || 0; // Ensure the text is a number
+
+        $this.prop('Counter', 0).animate(
+            { Counter: targetValue },
+            {
+                duration: 1500,
+                easing: 'swing',
+                step: function (now) {
+                    $this.text(Math.ceil(now));
+                }
             }
-        });
+        );
     });
 });
 
 
-// ====skill icon ====
-let icon1 = () => {
-    let animate = document.getElementById("skillicon1");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-    // animate.style.transform = "";
-}
+// ==== skill icon ====
+document.addEventListener("DOMContentLoaded", function () {
+    const progressContainers = document.querySelectorAll(".progress-container");
 
-let iconRemove1 = () => {
-    let animate = document.getElementById("skillicon1");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
+    // Intersection Observer for Scroll Animations
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                fillProgress(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
 
-let icon2 = () => {
-    let animate = document.getElementById("skillicon2");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
+    progressContainers.forEach(container => observer.observe(container));
 
-let iconRemove2 = () => {
-    let animate = document.getElementById("skillicon2");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
+    function fillProgress(container) {
+        let progressFill = container.querySelector(".progress-fill");
+        let progressText = container.querySelector(".progress-text");
+        let targetValue = container.getAttribute("data-value");
 
-let icon3 = () => {
-    let animate = document.getElementById("skillicon3");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.2)";
-}
-
-let iconRemove3 = () => {
-    let animate = document.getElementById("skillicon3");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon4 = () => {
-    let animate = document.getElementById("skillicon4");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove4 = () => {
-    let animate = document.getElementById("skillicon4");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon5 = () => {
-    let animate = document.getElementById("skillicon5");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove5 = () => {
-    let animate = document.getElementById("skillicon5");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon6 = () => {
-    let animate = document.getElementById("skillicon6");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove6 = () => {
-    let animate = document.getElementById("skillicon6");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon7 = () => {
-    let animate = document.getElementById("skillicon7");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.35)";
-}
-
-let iconRemove7 = () => {
-    let animate = document.getElementById("skillicon7");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon8 = () => {
-    let animate = document.getElementById("skillicon8");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove8 = () => {
-    let animate = document.getElementById("skillicon8");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon9 = () => {
-    let animate = document.getElementById("skillicon9");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.2)";
-}
-
-let iconRemove9 = () => {
-    let animate = document.getElementById("skillicon9");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon10 = () => {
-    let animate = document.getElementById("skillicon10");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove10 = () => {
-    let animate = document.getElementById("skillicon10");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon11 = () => {
-    let animate = document.getElementById("skillicon11");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove11 = () => {
-    let animate = document.getElementById("skillicon11");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon12 = () => {
-    let animate = document.getElementById("skillicon12");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove12 = () => {
-    let animate = document.getElementById("skillicon12");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon13 = () => {
-    let animate = document.getElementById("skillicon13");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove13 = () => {
-    let animate = document.getElementById("skillicon13");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon14 = () => {
-    let animate = document.getElementById("skillicon14");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove14 = () => {
-    let animate = document.getElementById("skillicon14");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
-
-let icon15 = () => {
-    let animate = document.getElementById("skillicon15");
-    animate.style.transition = "all .8s ease";
-    animate.style.transform = "rotateY(360deg) scale(1.3)";
-}
-
-let iconRemove15 = () => {
-    let animate = document.getElementById("skillicon15");
-    animate.style.transition = "all 1.2s ease";
-    animate.style.transform = "rotateY(-360deg)";
-}
+        let width = 0;
+        let interval = setInterval(() => {
+            if (width >= targetValue) {
+                clearInterval(interval);
+                if (width == 100) {
+                    progressFill.classList.add("complete");
+                }
+            } else {
+                width++;
+                progressFill.style.width = width + "%";
+                progressText.innerText = width + "%";
+            }
+        }, 20);
+    }
+});
 
 
 // ==== email integration code ====

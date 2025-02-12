@@ -22,7 +22,7 @@ main {
 }
 
 #nav {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out !important;
     z-index: 1000;
 }
 
@@ -67,12 +67,20 @@ main {
 .nav-link {
     font: 700 17px var(--headfont) !important;
     color: var(--whitecolor) !important;
-    transition: all .5s;
+    transition: all .4s ease-in-out !important;
+}
+
+.on {
+    color: var(--blackcolor) !important;
 }
 
 .nav-link:hover {
     color: var(--blackcolor) !important;
+    background-color: var(--themecolor);
+    transform: scale(1.1) translateY(-5px);
+    text-shadow: 1px 1px 10px var(--whitecolor);
 }
+
 
 /* ==== herosection ==== */
 #herosection {
@@ -82,7 +90,7 @@ main {
 #heroimg {
     filter: drop-shadow(0 0 25px var(--themecolor));
     animation: mymove 5s ease-in-out infinite;
-    transition: all .3s ease;
+    transition: all .4s ease !important;
     width: 80%;
     height: 95%;
 }
@@ -131,7 +139,7 @@ main {
     color: white;
     padding: 8px 30px !important;
     border-radius: 100px !important;
-    transition: all .3s ease;
+    transition: all .4s ease !important;
 }
 
 .herobtn:hover {
@@ -171,7 +179,7 @@ main {
     font-size: 22px;
     border: 2px solid var(--themecolor);
     border-radius: 50%;
-    transition: all .3s ease;
+    transition: all .4s ease !important;
 }
 
 #abouticon1 {
@@ -246,17 +254,18 @@ main {
     padding: 20px 20px;
     position: relative;
     cursor: pointer;
-    transition: .5s;
+    transition: .5s !important;
 }
 
 .timeline ul li span {
     display: inline-block;
-    background-color: rgba(0, 127, 114, 0.4);
+    background-color: #c9f7e8;
     border-radius: 25px;
     padding: 3px 6px;
     /* font-size: 15px; */
     font: 500 15px var(--headfont);
     text-align: center;
+    color: var(--blackcolor);
 }
 
 .timeline ul li .content h3 {
@@ -280,7 +289,7 @@ main {
     border-radius: 50%;
     left: -11px;
     top: 28px;
-    transition: .5s;
+    transition: .5s !important;
 }
 
 .timeline ul li:hover {
@@ -290,7 +299,6 @@ main {
 
 /* ==== skills ==== */
 #skills {
-    /* margin: 120px 0px; */
     background-color: var(--lightcolor);
 }
 
@@ -303,102 +311,121 @@ main {
     color: var(--themecolor);
 }
 
-.skillbar {
-    border: 2px solid var(--themecolor);
-    margin: 5px;
-    padding: 10px 10px 0px;
-    background-color: rgba(0, 127, 114, 0.108);
+/* #html {
+    background-image: url('../images/illustrative/html1.png');
+}
+
+#bs {
+    background-image: url('../images/illustrative/bs.png');
+}
+
+#js {
+    background-image: url('../images/illustrative/js.png');
+}
+
+#rj {
+    background-image: url('../images/illustrative/rjs.png');
+}
+
+#rd {
+    background-image: url('../images/illustrative/rd.png');
+}
+
+#jq {
+    background-image: url('../images/illustrative/jq.png');
+}
+
+#sql {
+    background-image: url('../images/illustrative/sql.png');
+}
+
+#jq {
+    background-image: url('../images/illustrative/jq.png');
+}
+
+#jq {
+    background-image: url('../images/illustrative/jq.png');
+}
+
+#html,
+#bs,
+#js {
+    background-position: 98%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: animate 5s linear infinite alternate;
+}
+
+@keyframes animate {
+    from {
+        background-position: 50%;
+    }
+
+    to {
+        background-position: 100%;
+    }
+} */
+
+.progress-container {
+    margin: 15px;
+    padding: 15px;
+    background: #c9f7e8;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out !important;
+    background-image: url('../images/illustrative/skill2.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.progress-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-title {
+    margin-bottom: 10px;
+    display: block;
+    font: 600 1.2rem var(--textfont);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: rgba(10, 75, 105, 0.281);
     border-radius: 10px;
-}
-
-/* .skillbar:hover{
-    
-} */
-
-/* progressbar */
-.progress-title {
-    font: 700 18px var(--textfont);
-    color: var(--blackcolor);
-    margin: 0 0 15px;
-}
-
-.progress {
-    height: 17px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    margin-bottom: 30px;
-    overflow: visible;
     position: relative;
+    overflow: hidden;
 }
 
-.progress .progress-bar {
-    border-radius: 15px;
-    box-shadow: none;
-    position: relative;
-    animation: animate-positive 2s;
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(45deg, #06beb6, #48b1bf);
+    border-radius: 10px;
+    transition: width 2s ease-in-out !important;
 }
 
-.progress .progress-icon,
-.progress .progress-value {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    line-height: 37.5px;
-    background: #fff;
-    border: 7px solid #4CCD99;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--themecolor);
+.progress-text {
     position: absolute;
-    top: -17px;
-    right: -5px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font: 500 15px var(--textfont);
+    color: var(--whitecolor);
 }
 
-.progress .progress-icon {
-    right: auto;
-    left: -5px;
+.progress-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.skillicon {
-    font-size: 22px;
-    color: #003c36;
+.progress-fill.complete {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
 }
-
-/* .progress.orange .progress-icon,
-.progress.orange .progress-value {
-    border: 7px solid green;
-    color: red;
-} */
-
-/* .progress.pink .progress-icon,
-.progress.pink .progress-value {
-    border: 7px solid black;
-    color: #f2438f;
-} */
-
-/* .progress.green .progress-icon,
-.progress.green .progress-value {
-    border: 7px solid cyan;
-    color: #08a061;
-} */
-
-@-webkit-keyframes animate-positive {
-    0% {
-        width: 0;
-    }
-}
-
-@keyframes animate-positive {
-    0% {
-        width: 0;
-    }
-}
-
-/* .skillbar i{
-    font-size: 100px;
-    position: relative;
-    left: 460px;
-} */
 
 /* ==== project ==== */
 #project {
@@ -417,13 +444,17 @@ main {
 
 .projectcard {
     background-color: var(--lightcolor);
-    transition: all .3s ease;
+    transition: all .4s ease-in-out !important;
     border: 3.5px solid var(--lightcolor);
+    transform: translateY(10px);
 }
 
 .projectcard:hover {
-    border-color: var(--themecolor);
-    transform: scale(1.02);
+    /* border-color: var(--themecolor); */
+    /* opacity: 1; */
+    /* transform: scale(1.02); */
+    transform: translateY(0px);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
 }
 
 #project1,
@@ -521,12 +552,19 @@ main {
     color: white;
     padding: 10px 25px;
     border-radius: 100px;
-    transition: all .3s ease;
+    transition: all .4s ease !important;
 }
 
 input,
 textarea {
     border: 2px solid var(--themecolor) !important;
+}
+
+textarea {
+    background-image: url('../images/illustrative/rb_1681.png') !important;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 input::placeholder,
@@ -551,6 +589,11 @@ textarea::placeholder {
 #foottext span {
     color: var(--themecolor);
     font-family: var(--headfont);
+    transition: all .4s ease-in-out !important;
+}
+
+#foottext span:hover{
+    text-decoration: underline;
 }
 
 
@@ -628,13 +671,13 @@ textarea::placeholder {
     }
 
     /* ==== skills ==== */
-    .skillbar {
-        margin: 10px;
-        padding: 15px 15px 0px;
-    }
-
     #skillhead {
         font-size: 53px;
+    }
+
+    .progress-container {
+        padding: 20px 30px;
+        width: 46%;
     }
 
     /* ==== project ==== */
@@ -668,6 +711,14 @@ textarea::placeholder {
         font-size: 19px;
     }
 
+    /* ==== education ==== */
+    #education {
+        background-image: url('../images/illustrative/edu1.png');
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
     /* ==== projects ==== */
     .projectname {
         font-size: 26px;
@@ -695,8 +746,9 @@ textarea::placeholder {
     }
 
     /* ==== education ==== */
-    #book {
-        margin-right: 350px;
+    #education {
+        background-position: 75%;
     }
+
 
 }

@@ -50,22 +50,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active mx-2" aria-current="page" href="#herosection">Home</a>
+                            <a class="nav-link active mx-2 mx-md-3 mx-lg-2" aria-current="page" href="#herosection">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#about">About</a>
+                            <a class="nav-link mx-2 mx-md-3 mx-lg-2" href="#about" id="home" onclick="active1()">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#education">Education</a>
+                            <a class="nav-link mx-2 mx-md-3 mx-lg-2" href="#education" id="edu" onclick="active2()">Education</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#skills">Skills</a>
+                            <a class="nav-link mx-2 mx-md-3 mx-lg-2" href="#skills">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#project">Projects</a>
+                            <a class="nav-link mx-2 mx-md-3 mx-lg-2" href="#project">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#contact">Contact</a>
+                            <a class="nav-link mx-2 mx-md-3 mx-lg-2" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -82,17 +82,22 @@
                     <div class="col-12 col-md-8 col-lg-6 text-center" data-aos="fade-right"></div>
                     <img src="./images/background/avtar.png" alt="avtar" class="img-fluid" id="heroimg">
             </div>
-            <div class="col-12 col-md-12 col-lg-6 mt-4 my-lg-auto" data-aos="fade-left" data-aos-duration="500"
-                data-aos-easing="linear">
-                <h3 class="herohead1">Hello, Myself</h3>
-                <h1 class="herohead2">Om Pimpale</h1>
-                <h3 class="herohead1">And I'm a <span>Full Stack Java Developer</span></h3>
-                <p class="my-2 pb-3" id="herotext">
-                    Seeking opportunities to apply classroom learning in a real-world setting and contribute to
-                    IT Industry.
-                </p>
-                <a href="#contact" class="text-decoration-none herobtn me-2">Hire me</a>
-                <a href="#project" class="text-decoration-none herobtn mx-2">Projects</a>
+            <div class="col-12 col-md-12 col-lg-6 mt-4 my-lg-auto">
+                <div data-aos="fade-left" data-aos-duration="500" data-aos-easing="linear">
+                    <h3 class="herohead1">Hello, Myself</h3>
+                    <h1 class="herohead2">Om Pimpale</h1>
+                    <h3 class="herohead1">And I'm a <span>Full Stack Java Developer</span></h3>
+                    <p class="my-2 pb-3" id="herotext">
+                        Seeking opportunities to apply classroom learning in a real-world setting and contribute to
+                        IT Industry.
+                    </p>
+                </div>
+                <div>
+                    <a href="#contact" class="text-decoration-none herobtn me-2" data-aos="zoom-in"
+                        data-aos-duration="1000" data-aos-easing="linear">Hire me</a>
+                    <a href="#project" class="text-decoration-none herobtn mx-2" data-aos="zoom-in"
+                        data-aos-duration="1000" data-aos-easing="linear">Projects</a>
+                </div>
             </div>
         </section>
         </div>
@@ -107,11 +112,11 @@
                         <img src="./images/background/avtar3.png" alt="avtra" class="img-fluid">
                     </div>
                     <div class="col-12 col-md-11 col-lg-6 my-auto">
-                        <h2 id="abouthead1" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
+                        <h2 id="abouthead1" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="linear">
                             About <span>Me</span></h2>
-                        <h3 id="abouthead2" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">I'm
+                        <h3 id="abouthead2" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="linear">I'm
                             a <span>Full Stack Java Developer</span></h3>
-                        <p id="abouttext" class="my-3 pb-3" data-aos="fade-right" data-aos-duration="1000"
+                        <p id="abouttext" class="my-3 pb-3" data-aos="zoom-in" data-aos-duration="1000"
                             data-aos-easing="linear">
                             Motivated and detail-oriented Computer Science (CSE) student with a solid academic
                             foundation and a passion for technology. Proficient in Full Stack Web Development, with
@@ -141,7 +146,7 @@
         <!-- ==== education ==== -->
         <section class="row" id="education">
             <div class="col">
-                <section class="row justify-content-center">
+                <section class="row justify-content-center justify-content-xxl-start">
                     <h2 id="eduhead" class="text-center mb-4"><span>E</span>ducation</h2>
                     <div class="col-12 col-lg-9 col-xxl-9 d-xxl-flex align-items-center">
                         <div class="timeline pb-0 mx-auto">
@@ -188,8 +193,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <img src="./images/illustrative/book.svg" alt="book" class="img-fluid d-none d-xxl-inline"
-                            id="book" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
+                        <!-- <img src="./images/illustrative/book.svg" alt="book" class="img-fluid d-none d-xxl-inline"
+                            id="book" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear"> -->
                     </div>
                 </section>
             </div>
@@ -197,196 +202,151 @@
 
         <!-- ==== skills ==== -->
         <section class="row justify-content-center" id="skills">
-            <div class="col-11 col-md-12 my-5">
+            <div class="col-11 col-md-11 col-lg-12 my-5">
                 <h2 id="skillhead" class="text-center mb-4 mb-lg-5"><span>S</span>kills</h2>
                 <section class="row justify-content-center">
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon1()" onmouseleave="iconRemove1()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">HTML5</h3>
-                            <i class="fa-brands fa-html5 skillicon" id="skillicon1"></i>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:93%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-brands fa-html5"></i></span> -->
-                                <div class="progress-value"><span>93</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="93" id="html">
+                        <span class="skill-title">HTML5</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="html-progress"></div>
+                            <span class="progress-text" id="html-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon2()" onmouseleave="iconRemove2()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">CSS3</h3>
-                            <i class="fa-brands fa-css3-alt skillicon" id="skillicon2"></i>
-                        </div>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:83%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-brands fa-css3-alt"></i></span> -->
-                                <div class="progress-value"><span>83</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="83" id="css">
+                        <span class="skill-title">CSS3</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="css-progress"></div>
+                            <span class="progress-text" id="css-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon3()" onmouseleave="iconRemove3()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">Responsive Web Designing</h3>
-                            <i class="fa-solid fa-laptop-code skillicon" id="skillicon3"></i>
-                        </div>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:95%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-solid fa-laptop-code"></i></span> -->
-                                <div class="progress-value"><span>95</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="95" id="rwd">
+                        <span class="skill-title">Responsive Web Designing</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="rwd-progress"></div>
+                            <span class="progress-text" id="rwd-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon4()" onmouseleave="iconRemove4()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">Bootstrap 5</h3>
-                            <i class="fa-brands fa-bootstrap skillicon" id="skillicon4"></i>
-                        </div>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:85%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-brands fa-bootstrap"></i></span> -->
-                                <div class="progress-value"><span>85</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="85" id="bs">
+                        <span class="skill-title">Bootstrap</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="bs-progress"></div>
+                            <span class="progress-text" id="bs-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon5()" onmouseleave="iconRemove5()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">JavaScript</h3>
-                            <i class="fa-brands fa-js skillicon" id="skillicon5"></i>
-                        </div>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:76%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-brands fa-js"></i></span> -->
-                                <div class="progress-value"><span>76</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="76" id="js">
+                        <span class="skill-title">JavaScript</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="js-progress"></div>
+                            <span class="progress-text" id="js-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon6()" onmouseleave="iconRemove6()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">ReactJS</h3>
-                            <i class="fa-brands fa-react skillicon" id="skillicon6"></i>
-                        </div>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:86%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-brands fa-react"></i></span> -->
-                                <div class="progress-value"><span>86</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="86" id="rj">
+                        <span class="skill-title">ReactJS</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="rj-progress"></div>
+                            <span class="progress-text" id="rj-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon7()" onmouseleave="iconRemove7()">
-                        <h3 class="progress-title">Redux</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"></span> -->
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="87" id="rd">
+                        <span class="skill-title">Redux</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="rd-progress"></div>
+                            <span class="progress-text" id="rd-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon8()" onmouseleave="iconRemove8()">
-                        <h3 class="progress-title"> jQuery</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:87%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"></span> -->
-                                <div class="progress-value"><span>87</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="89" id="jq">
+                        <span class="skill-title">jQuery</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="jq-progress"></div>
+                            <span class="progress-text" id="jq-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon9()" onmouseleave="iconRemove9()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">Core Java</h3>
-                            <i class="fa-brands fa-java skillicon" id="skillicon9"></i>
+
+                    <!-- <div class="col-12 col-lg-5 progress-container" data-value="0" id="cj">
+                        <span class="skill-title">Core Java</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="cj-progress"></div>
+                            <span class="progress-text" id="cj-text">0%</span>
                         </div>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-brands fa-java"></i></span> -->
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-12 col-md-5 skillbar" onmouseover="icon10()" onmouseleave="iconRemove10()">
-                        <h3 class="progress-title me-2">Advanced Java</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
-                                <span class="progress-icon"></span>
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
+                    </div> 
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="0" id="aj">
+                        <span class="skill-title">Advanced Java</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="aj-progress"></div>
+                            <span class="progress-text" id="aj-text">0%</span>
                         </div>
                     </div> -->
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon11()" onmouseleave="iconRemove11()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">MySQL</h3>
-                            <i class="fa-solid fa-database skillicon" id="skillicon11"></i>
-                        </div>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-solid fa-database"></i></span> -->
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="79" id="sql">
+                        <span class="skill-title">MySQL</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="sql-progress"></div>
+                            <span class="progress-text" id="sql-text">0%</span>
                         </div>
                     </div>
-                    <!-- <div class="col-12 col-md-5 skillbar" onmouseover="icon12()" onmouseleave="iconRemove12()">
-                        <h3 class="progress-title">Spring</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
-                                <span class="progress-icon"></span>
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
+
+                    <!-- <div class="col-12 col-lg-5 progress-container" data-value="0" id="sp">
+                        <span class="skill-title">Spring</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="sp-progress"></div>
+                            <span class="progress-text" id="sp-text">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="0" id="sb">
+                        <span class="skill-title">Spring Boot</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="sb-progress"></div>
+                            <span class="progress-text" id="sb-text">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="0" id="hb">
+                        <span class="skill-title">Hibernate</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="hb-progress"></div>
+                            <span class="progress-text" id="hb-text">0%</span>
                         </div>
                     </div> -->
-                    <!-- <div class="col-12 col-md-5 skillbar" onmouseover="icon13()" onmouseleave="iconRemove13()">
-                        <h3 class="progress-title">Spring Boot</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
-                                <span class="progress-icon"></span>
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-12 col-md-5 skillbar" onmouseover="icon14()" onmouseleave="iconRemove14()">
-                        <h3 class="progress-title">Hibernate</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#4CCD99;">
-                                <span class="progress-icon"></span>
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="col-12 col-md-5 skillbar" onmouseover="icon15()" onmouseleave="iconRemove15()">
-                        <div class="d-flex">
-                            <h3 class="progress-title me-2">Git and GitHub</h3>
-                            <i class="fa-brands fa-github skillicon" id="skillicon15"></i>
-                        </div>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:79%; background:#4CCD99;">
-                                <!-- <span class="progress-icon"><i class="fa-brands fa-github"></i></span> -->
-                                <div class="progress-value"><span>79</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="74" id="git">
+                        <span class="skill-title">Git and GitHub</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="git-progress"></div>
+                            <span class="progress-text" id="git-text">0%</span>
                         </div>
                     </div>
-                    <!-- <div class="col-12 col-md-6">
-                        <h3 class="progress-title">Problem Solving</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#f7810e;">
-                                <span class="progress-icon fa fa-rocket"></span>
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="81" id="ps">
+                        <span class="skill-title">Problem Solving</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="ps-progress"></div>
+                            <span class="progress-text" id="ps-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <h3 class="progress-title">Operating System</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#f7810e;">
-                                <span class="progress-icon fa fa-rocket"></span>
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
+
+                    <!-- <div class="col-12 col-lg-5 progress-container" data-value="0" id="os">
+                        <span class="skill-title">Operating System</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="os-progress"></div>
+                            <span class="progress-text" id="os-text">0%</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <h3 class="progress-title">Computer Networking</h3>
-                        <div class="progress orange">
-                            <div class="progress-bar" style="width:90%; background:#f7810e;">
-                                <span class="progress-icon fa fa-rocket"></span>
-                                <div class="progress-value"><span>90</span>%</div>
-                            </div>
+
+                    <div class="col-12 col-lg-5 progress-container" data-value="0" id="cn">
+                        <span class="skill-title">Computer Networking</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="cn-progress"></div>
+                            <span class="progress-text" id="cn-text">0%</span>
                         </div>
                     </div> -->
                 </section>
@@ -400,7 +360,7 @@
                 <section class="row justify-content-md-center">
 
                     <!-- first project -->
-                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0" data-aos="flip-right" data-aos-duration="1000"
+                    <div class="col-12 col-md-5 mb-2 m-md-3 mt-md-0" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-easing="linear">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
@@ -419,21 +379,20 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
+                                    This template is optimized for businesses showcasing their VR solutions, promoting
+                                    demos, or offering services in the virtual reality space.
                                 </p>
                                 <div class="d-inline-block learn">HTML</div>
                                 <div class="d-inline-block learn">CSS</div>
-                                <div class="d-inline-block learn">ResponsiveDesign</div>
                                 <div class="d-inline-block learn">jQuery</div>
+                                <div class="d-inline-block learn">ResponsiveDesign</div>
                                 <div class="d-inline-block learn">Git&Gihub</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- second project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3 mt-md-0" data-aos="flip-left" data-aos-duration="1000"
+                    <div class="col-12 col-md-5 my-2 m-md-3 mt-md-0" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-easing="linear">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Javelin---Home-Fitness-Web-Template/" target="_blank"
@@ -453,21 +412,21 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
+                                    The Javelin Web Template is a professional and visually engaging website design,
+                                    crafted to meet the needs of modern businesses and individuals in the fitness,
+                                    training, and technology sectors.
                                 </p>
                                 <div class="d-inline-block learn">HTML</div>
                                 <div class="d-inline-block learn">CSS</div>
-                                <div class="d-inline-block learn">ResponsiveDesign</div>
                                 <div class="d-inline-block learn">AOS</div>
+                                <div class="d-inline-block learn">ResponsiveDesign</div>
                                 <div class="d-inline-block learn">Git&Gihub</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- third project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="flip-right" data-aos-duration="1000"
+                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-easing="linear">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Winns_Digital_Agency---Web-Template/" target="_blank"
@@ -487,23 +446,23 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
+                                    The Winns Web Template is perfect for businesses seeking a sleek, modern platform to
+                                    showcase their services, portfolio, or ideas while maintaining a strong and credible
+                                    online presence.
                                 </p>
                                 <div class="d-inline-block learn">HTML</div>
                                 <div class="d-inline-block learn">CSS</div>
-                                <div class="d-inline-block learn">Bootstrap</div>
-                                <div class="d-inline-block learn">BootstrapGridSystem</div>
-                                <div class="d-inline-block learn">jQuery</div>
                                 <div class="d-inline-block learn">AOS</div>
+                                <div class="d-inline-block learn">Bootstrap</div>
+                                <div class="d-inline-block learn">jQuery</div>
                                 <div class="d-inline-block learn">Git&Gihub</div>
+                                <div class="d-inline-block learn">BootstrapGridSystem</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- fourth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="flip-left" data-aos-duration="1000"
+                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-easing="linear">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Eroox_Gaming_-_eSports-Web_Template/" target="_blank"
@@ -523,22 +482,22 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
+                                    A visually stunning and feature-rich website template designed specifically for game
+                                    studios. Featuring a bold, modern design with a focus on showcasing your games,
+                                    team, and community.
                                 </p>
                                 <div class="d-inline-block learn">HTML</div>
                                 <div class="d-inline-block learn">CSS</div>
+                                <div class="d-inline-block learn">AOS</div>
                                 <div class="d-inline-block learn">Bootstrap</div>
                                 <div class="d-inline-block learn">BootstrapGridSystem</div>
-                                <div class="d-inline-block learn">AOS</div>
                                 <div class="d-inline-block learn">Git&Gihub</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- fifth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="flip-right" data-aos-duration="1000"
+                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-easing="linear">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Neura---Web_Template/index.html" target="_blank"
@@ -558,23 +517,23 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
+                                    A visually stunning and feature-rich website template designed specifically for AI
+                                    and technology-focused businesses. Featuring a clean, minimalist design with a focus
+                                    on showcasing your AI solutions, team, and expertise.
                                 </p>
                                 <div class="d-inline-block learn">HTML</div>
                                 <div class="d-inline-block learn">CSS</div>
                                 <div class="d-inline-block learn">Bootstrap</div>
                                 <div class="d-inline-block learn">BootstrapGridSystem</div>
-                                <div class="d-inline-block learn">MultiPageTemplate</div>
                                 <div class="d-inline-block learn">jQuery</div>
+                                <div class="d-inline-block learn">MultiPageTemplate</div>
                                 <div class="d-inline-block learn">Git&Gihub</div>
                             </div>
                         </section>
                     </div>
 
                     <!-- sixeth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="flip-left" data-aos-duration="1000"
+                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-easing="linear">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://om-pimpale-props.netlify.app/" target="_blank" class="p-0">
@@ -593,12 +552,15 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
+                                    Sierra Natural Park offers a dynamic and engaging experience. Its clean and
+                                    minimalist design, coupled with interactive elements, invites users to explore the
+                                    beauty of the natural world.
                                 </p>
                                 <div class="d-inline-block learn">React.js</div>
                                 <div class="d-inline-block learn">props</div>
+                                <div class="d-inline-block learn">HTML&CSS</div>
+                                <div class="d-inline-block learn">Bootstrap</div>
+                                <div class="d-inline-block learn">ResponsiveDesign</div>
                                 <div class="d-inline-block learn">JavaScript</div>
                                 <div class="d-inline-block learn">Git&Gihub</div>
                             </div>
@@ -606,7 +568,7 @@
                     </div>
 
                     <!-- seventh project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="flip-right" data-aos-duration="1000"
+                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-easing="linear">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://om-pimpale-router.netlify.app/" target="_blank" class="p-0">
@@ -618,19 +580,23 @@
                             <div class="col-12 my-3 d-flex justify-content-between">
                                 <a href="https://om-pimpale-router.netlify.app/" target="_blank"
                                     class="text-decoration-none">
-                                    <h3 class="projectname mb-0"><span>Hideawat</span> Resort</h3>
+                                    <h3 class="projectname mb-0"><span>Hideaway</span> Resort</h3>
                                 </a>
                                 <a href="https://github.com/OmPimpale/Hideaway_Router_Template.git" target="_blank"><i
                                         class="fa-brands fa-github gitlogo mt-1"></i></a>
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
+                                    Hideaway Resort offers a seamless and engaging journey through the virtual world of
+                                    your resort. Its clean and minimalist design, coupled with smooth transitions
+                                    between pages, invites users to explore the beauty of your location and plan their
+                                    dream vacation.
                                 </p>
                                 <div class="d-inline-block learn">React.js</div>
                                 <div class="d-inline-block learn">ReactRouter</div>
+                                <div class="d-inline-block learn">HTML&CSS</div>
+                                <div class="d-inline-block learn">Bootstrap</div>
+                                <div class="d-inline-block learn">ResponsiveDesign</div>
                                 <div class="d-inline-block learn">JavaScript</div>
                                 <div class="d-inline-block learn">Git&Gihub</div>
                             </div>
@@ -638,7 +604,7 @@
                     </div>
 
                     <!-- eighth project -->
-                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="flip-left" data-aos-duration="1000"
+                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-easing="linear">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Crose_Chruch_Site/" target="_blank" class="p-0">
@@ -657,9 +623,8 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
+                                    This template is crafted for churches, religious organizations, and spiritual
+                                    communities to establish their online presence with elegance and simplicity.
                                 </p>
                                 <div class="d-inline-block learn">HTML</div>
                                 <div class="d-inline-block learn">CSS</div>
@@ -671,38 +636,42 @@
                     </div>
 
                     <!-- ninth project -->
-                    <!-- <div class="col-12 col-md-5 my-2 m-md-3">
-                        <section class="row p-3 projectcard rounded-3 h-100">
-                            <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
-                                <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project9">
-                                    <img src="./images/illustrative/1.png" alt="project9"
-                                        class="img-fluid projectimg rounded-3">
-                                </div>
+                    <div class="col-12 col-md-5 my-2 m-md-3" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-easing="linear"">
+                        <section class=" row p-3 projectcard rounded-3 h-100">
+                        <a href="https://ompimpale-dashboard.netlify.app/" target="_blank" class="p-0">
+                            <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project9">
+                                <img src="./images/illustrative/9.png" alt="project9"
+                                    class="img-fluid projectimg rounded-3">
+                            </div>
+                        </a>
+                        <div class="col-12 my-3 d-flex justify-content-between">
+                            <a href="https://ompimpale-dashboard.netlify.app/" target="_blank"
+                                class="text-decoration-none">
+                                <h3 class="projectname mb-0">User <span>Dashboard</span></h3>
                             </a>
-                            <div class="col-12 my-3 d-flex justify-content-between">
-                                <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank"
-                                    class="text-decoration-none">
-                                    <h3 class="projectname mb-0"><span>Apzo</span> Virtual Reality</h3>
-                                </a>
-                                <a href="https://github.com/OmPimpale/Apzo---VR---Web-Template.git" target="_blank"><i
-                                        class="fa-brands fa-github gitlogo mt-1"></i></a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <p class="projectdiscribtion">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione doloremque quod
-                                    sunt
-                                    eos dolor maxime?
-                                </p>
-                                <div class="d-inline-block learn">HTML</div>
-                                <div class="d-inline-block learn">CSS</div>
-                                <div class="d-inline-block learn">Medial Query</div>
-                                <div class="d-inline-block learn">Git&Gihub</div>
-                            </div>
-                        </section>
-                    </div> -->
+                            <a href="https://github.com/OmPimpale/React_Dashboard.git" target="_blank"><i
+                                    class="fa-brands fa-github gitlogo mt-1"></i></a>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <p class="projectdiscribtion">
+                                This template is designed to provide a clean and responsive UI for displaying data
+                                visualizations in an interactive and user-friendly manner.
+                            </p>
+                            <div class="d-inline-block learn">HTML</div>
+                            <div class="d-inline-block learn">CSS</div>
+                            <div class="d-inline-block learn">ResponsiveDesign</div>
+                            <div class="d-inline-block learn">JavaScript</div>
+                            <div class="d-inline-block learn">React.js</div>
+                            <div class="d-inline-block learn">EasyPieChart</div>
+                            <div class="d-inline-block learn">ChartJS</div>
+                            <div class="d-inline-block learn">Git&Gihub</div>
+                        </div>
+                </section>
+            </div>
 
-                    <!-- tenth project -->
-                    <!-- <div class="col-12 col-md-5 my-2 m-md-3">
+            <!-- tenth project -->
+            <!-- <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project10">
@@ -732,8 +701,8 @@
                         </section>
                     </div> -->
 
-                    <!-- eleventh project -->
-                    <!-- <div class="col-12 col-md-5 my-2 m-md-3">
+            <!-- eleventh project -->
+            <!-- <div class="col-12 col-md-5 my-2 m-md-3">
                         <section class="row p-3 projectcard rounded-3 h-100">
                             <a href="https://ompimpale.github.io/Apzo---VR---Web-Template/" target="_blank" class="p-0">
                                 <div class="col-12 p-3 py-md-4 p-lg-4 rounded-3" id="project11">
@@ -762,8 +731,8 @@
                             </div>
                         </section>
                     </div> -->
-                </section>
-            </div>
+        </section>
+        </div>
         </section>
 
         <!-- ==== contact ==== -->
@@ -783,10 +752,10 @@
                                 <input type="tel" placeholder="Phone Number" class="form-control my-lg-2 me-lg-1 py-2"
                                     id="mobno" required>
                                 <input type="text" placeholder="Subject" class="form-control my-2 ms-lg-1 py-2"
-                                    id="subject" required>
+                                    id="subject" required spellcheck="true">
                             </div>
                             <textarea placeholder="Your Message" rows="6" class="form-control py-3 mt-lg-3" id="msg"
-                                required></textarea>
+                                required spellcheck="true"></textarea>
                             <button class="btn m-4" type="submit" id="formbtn" onclick="sendMail()" data-aos="zoom-in"
                                 data-aos-duration="1000" data-aos-easing="linear">Send Message</button>
                         </form>
