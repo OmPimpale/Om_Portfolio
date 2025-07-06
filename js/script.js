@@ -25,18 +25,6 @@ function debounce(func, wait) {
     };
 }
 
-// let active1=()=>{
-//     let element = document.getElementById("home");
-//     element.classList.add("on");
-// }
-
-// let active2=()=>{
-//     let element = document.getElementById("edu");
-//     element.classList.add("on");
-// }
-
-
-
 // ==== progress bar ====
 $(document).ready(function () {
     $('.progress-value > span').each(function () {
